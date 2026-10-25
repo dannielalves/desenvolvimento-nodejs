@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "chalk": "^6.0.1"
+  },
+  "name": "8.1_chalk_esm",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Daniel Alves de Araújo <dannielfisico@hotmail.com.> (https://interativasistemas.com.br/)",
+  "license": "ISC"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "10_abstracao_input",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Daniel Alves de Araújo <dannielfisico@hotmail.com.> (https://interativasistemas.com.br/)",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^8.7.3",
+    "inquire": "^0.4.8"
+  }
+}

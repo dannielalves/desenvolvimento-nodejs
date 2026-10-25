@@ -1,0 +1,9 @@
+# pasta 0_DOCUMENTOS
+0_DOCUMENTOS/
+
+# arq txt
+.txt
+
+node_modules/
+.env
+npm-debug.log

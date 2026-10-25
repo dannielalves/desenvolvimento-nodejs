@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "inquirer": "^14.2.3"
+  },
+  "name": "10.1_abstracao_input",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Daniel Alves de Araújo <dannielfisico@hotmail.com.> (https://interativasistemas.com.br/)",
+  "license": "ISC",
+  "type": "commonjs"
+}
