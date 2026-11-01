@@ -1,9 +1,7 @@
 const http = require('http')
 const fs = require('fs')
 const url = require('url')
-
 const port = 3003
-
 //Criando servidor de roteamento simples com Core Modules em Node.js
 const server = http.createServer((req, res)=> {
     //Capturando informações da url (requisição)
@@ -15,7 +13,6 @@ const server = http.createServer((req, res)=> {
     if(file === ''){
         file = 'index.html' //Se não houve nome significa que estamos na home
     }
-
     //Verificando se o arquivo existe
     if(fs.existsSync(file)){
         fs.readFile(file, (err,data)=>{
@@ -36,8 +33,6 @@ const server = http.createServer((req, res)=> {
             res.end(data)
         })
     }
-
-
 })
 
 server.listen(port, ()=> console.log(`Servidor Online na porta ${port}.`))
