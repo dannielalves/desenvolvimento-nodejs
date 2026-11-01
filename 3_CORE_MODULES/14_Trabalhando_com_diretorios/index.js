@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-if(!fs.existsSync('./minhaPasta')){
+if(!fs.existsSync('./minhaPasta')){ //Se a pasta não existir
     console.log('Não existe')
 
     fs.mkdir('./minhaPasta', (err) => {
@@ -11,6 +11,6 @@ if(!fs.existsSync('./minhaPasta')){
         console.log('Pasta criada com sucesso!')
     })
     
-} else {
+} else { //Caso a pasta exista
     console.log('A pasta já existe')
 }
