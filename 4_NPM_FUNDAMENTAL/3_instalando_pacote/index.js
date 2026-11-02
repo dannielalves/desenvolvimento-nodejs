@@ -21,3 +21,19 @@ const clientes = [
 
 const ordenarCliente = _.orderBy(clientes, ['idade'], ['asc']) //Ordenar pela idade na ordem crescente 'ascendente'
 console.log('Clientes: ', ordenarCliente)
+
+//sumBy Soma valores de objetos
+const somaIdades = _.sumBy(clientes, 'idade')
+console.log(`Soma das idades: ${somaIdades}`)
+
+//forEach do lodash
+_.forEach(clientes, cliente => {
+    console.log(`Nome: ${cliente.nome} \nIdade: ${cliente.idade++}`)
+})
+
+const ordenarCliente2 = _.orderBy(clientes, ['idade'], ['asc']) //Ordenar pela idade na ordem crescente 'ascendente'
+console.log('Clientes: ', ordenarCliente2)
+
+//sumBy Soma valores de objetos
+const somaIdades2 = _.sumBy(clientes, 'idade')
+console.log(`Soma das idades: ${somaIdades2}`)
