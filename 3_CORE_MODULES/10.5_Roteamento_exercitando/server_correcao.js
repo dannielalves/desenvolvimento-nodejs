@@ -25,12 +25,14 @@ const server = http.createServer((req, res)=> {
       const urlInfo = new url.URL(req.url, 'http://localhost')
       //Pegar o nome do arquivo que está no endereço da url após a barra '/' da raiz
       let file = decodeURIComponent(urlInfo.pathname.substring(1)) //adicionado na correção
+      console.log('Arquivo solicitado:', file) //Teste segurança
       //Verificar se existe algo após a barra da raiz, se não existir significa que será exibida index.html
       if(file === ""){
         file = "index.html"
       }
     // Montar o caminho completo do arquivo
     const caminhoArquivo = path.resolve(publicDir, file)
+    
     // Verificar se o arquivo está dentro da pasta public adicionado na correção
     if(!caminhoArquivo.startsWith(publicDir + path.sep)){
         res.writeHead(403, {'Content-type': 'text/html; charset=utf-8'})
