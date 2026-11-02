@@ -12,7 +12,7 @@ const server = http.createServer((req, res)=> {
     //Acessando a raiz '/' quando não  há arquivos para ler exceto a pagina index.html
     if(urlInfo.pathname.substring(1) === ''){
         //Se não houve nome significa que estamos na home
-        file = '../10.3_roteamento/index.html'
+        file = '../10.3_roteamento/index.html' //Lendo arquivos da pasta 10.3
     }
     //Verificando se o arquivo existe
     if(fs.existsSync(file)){
