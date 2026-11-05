@@ -9,5 +9,9 @@
   "keywords": [],
   "author": "Daniel Alves de Araújo <dannielfisico@hotmail.com.> (https://interativasistemas.com.br/)",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "dependencies": {
+    "chalk": "^6.0.1",
+    "inquirer": "^14.2.5"
+  }
 }
