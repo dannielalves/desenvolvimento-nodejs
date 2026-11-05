@@ -5,4 +5,4 @@ const chalk = require('chalk')
 //Módulos internos
 const fs = require('fs')
 
-console.log('## INICIAMOS O ACCOUNTS ##')
+console.log('#### INICIAMOS O ACCOUNTS ####')
