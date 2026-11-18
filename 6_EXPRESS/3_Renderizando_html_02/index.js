@@ -15,5 +15,8 @@ app.get('/empresa', (req, res)=> {
 app.get('/contato', (req, res)=> {
     res.sendFile(path.join(basePath, 'contato.html'))
 })
+app.get('/produtos', (req, res)=> {
+    res.sendFile(path.join(basePath, 'produtos.html'))
+})
 
 app.listen(port, ()=> console.log(`App online na porta ${port}`))
