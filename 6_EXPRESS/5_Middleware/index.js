@@ -7,27 +7,26 @@ const app = express()
 
 //Middleware
 const checkAuth = function (req, res, next){
-    req.autorizado = true
+    req.autorizado = false
     
     if(req.autorizado){
         next()
     } else {
-        next()
-        
+        res.redirect('/login')
     }
 }
 
-//Rotas
-        app.get('/', (req, res)=> {
+//Rotas protegidas
+        app.get('/',checkAuth, (req, res)=> {
             res.sendFile(path.join(basepath, 'index.html'))
         })
-        app.get('/empresa', (req, res)=> {
+        app.get('/empresa',checkAuth, (req, res)=> {
             res.sendFile(path.join(basepath, 'empresa.html'))
         })
-        app.get('/produtos', (req, res)=> {
+        app.get('/produtos',checkAuth, (req, res)=> {
             res.sendFile(path.join(basepath, 'produtos.html'))
         })
-        app.get('/contato', (req, res)=> {
+        app.get('/contato',checkAuth, (req, res)=> {
             res.sendFile(path.join(basepath, 'contato.html'))
         })
         app.get('/login', (req, res)=> {
