@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lojas do Povo - Login</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/produtos">Produtos</a>
+            </li>
+            <li>
+                <a href="/servicos">Serviços</a>
+            </li>
+            <li>
+                <a href="/empresa">Empresa</a>
+            </li>
+            <li>
+                <a href="/login">Login</a>
+            </li>
+            <li>
+                <a href="/logoff">Sair</a>
+            </li>
+        </ul>
+    </nav>
+    <hr>
+    <h1>Lojas do Povo - Login</h1>
+    <form action="/login" method="post">
+        <div>
+            <input type="text" name="user" placeholder="Usuário" required autocomplete="off" min="3">
+        </div>
+        <div>
+            <input type="password" name="password" placeholder="Senha" required autocomplete="off" min="6">
+        </div>
+        <div>
+            <input type="submit" value="Entrar">
+        </div>
+    </form>
+</body>
+</html>
