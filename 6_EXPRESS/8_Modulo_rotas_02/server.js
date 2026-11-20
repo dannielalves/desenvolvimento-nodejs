@@ -5,6 +5,7 @@ const basepath = path.join(__dirname, 'templates')
 const app = express()
 const rotas = require('./rotas')
 
+app.use(express.static('./public'))
 
 app.use('/', rotas)
 
