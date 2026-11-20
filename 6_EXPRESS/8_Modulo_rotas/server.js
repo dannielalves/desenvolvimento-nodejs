@@ -3,6 +3,8 @@ const path = require('path')
 const port = 3025
 const basepath = path.join(__dirname, 'templates')
 
+const system = require('./system')
+
 const app = express()
 
 app.use(express.urlencoded({
@@ -14,12 +16,7 @@ app.use(
 
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.get('/produtos', (req, res)=> {
-    res.sendFile(path.join(basepath, 'produtos.html'))
-})
-app.get('/empresa', (req, res)=> {
-    res.sendFile(path.join(basepath, 'empresa.html'))
-})
+app.use('/', system)
 
 app.get('/', (req, res)=> {
     res.sendFile(path.join(basepath, 'index.html'))
