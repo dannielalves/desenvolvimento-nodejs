@@ -3,7 +3,7 @@ const path = require('path')
 const port = 3025
 const basepath = path.join(__dirname, 'templates')
 
-const system = require('./system')
+const rotas = require('./rotas')
 
 const app = express()
 
@@ -16,7 +16,7 @@ app.use(
 
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.use('/', system)
+app.use('/', rotas)
 
 app.get('/', (req, res)=> {
     res.sendFile(path.join(basepath, 'index.html'))
@@ -26,6 +26,5 @@ app.get('/', (req, res)=> {
 app.use((req, res) => {
     res.status(404).sendFile(path.join(basepath, '404.html'))
 })
-
 
 app.listen(port, ()=> console.log(`Aplicativo online na porta ${port}`))
