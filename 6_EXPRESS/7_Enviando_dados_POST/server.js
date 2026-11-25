@@ -14,8 +14,11 @@ app.get('/users/create', (req, res) => {
     res.status(200).sendFile(path.join(basepath, 'userform.html'))
 })
 
-app.post('users/save', (req, res) => {
-
+app.post('/users/save', (req, res) => {
+    res.status(200).sendFile(path.join(basepath, 'success.html'))
+    console.log(req.body)
+    const {name: nome, job: profissão} = req.body
+    console.log(`Usuário: ${nome} | Profissão: ${profissão}`)
 })
 
 app.get('/', (req, res)=> {
