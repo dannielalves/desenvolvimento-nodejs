@@ -8,6 +8,14 @@ router.get('/livros', (req, res)=> {
     res.sendFile(path.join(basepath, 'livros.html'))
 })
 
+router.get('/sobre', (req,res)=> {
+    res.sendFile(path.join(basepath, 'sobre.html'))
+})
+
+router.get('/admin/dashaboard', (req, res) => {
+    res.sendFile(path.join(basepath, 'painel.html'))
+})
+
 
 
 module.exports = router
