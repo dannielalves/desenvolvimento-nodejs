@@ -5,7 +5,12 @@ const basepath = path.join(__dirname, 'templates')
 
 const app = express()
 
+const rotas = require('./rotas/rotas.js')
+
 app.use(express.static('public'))
+
+
+app.use('/', rotas)
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(basepath, 'index.html'))
