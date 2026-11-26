@@ -18,7 +18,7 @@ app.get('/', (req, res)=> {
         surname: 'Alves'
     }
 
-    const auth = true
+    const auth = false
 
     res.render('home', {layout: 'main', user : user, auth}) //{layout: 'main'} pode se omitido nesse caso
 })
