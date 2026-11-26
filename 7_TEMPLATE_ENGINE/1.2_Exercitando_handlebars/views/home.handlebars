@@ -1,1 +1,5 @@
 <h1>Bem vindo ao Servidor, {{user.name}}!</h1>
+
+{{#if auth}} 
+    <p>{{user.name}}, você está autenticado</p>
+{{/if}}

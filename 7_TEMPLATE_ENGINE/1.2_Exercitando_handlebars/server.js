@@ -18,7 +18,9 @@ app.get('/', (req, res)=> {
         surname: 'Alves'
     }
 
-    res.render('home', {layout: 'main', user : user}) //{layout: 'main'} pode se omitido nesse caso
+    const auth = true
+
+    res.render('home', {layout: 'main', user : user, auth}) //{layout: 'main'} pode se omitido nesse caso
 })
 
 app.listen(port, ()=> console.log(`Aplicação online na porta ${port}`))
